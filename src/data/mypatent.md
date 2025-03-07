@@ -1,3 +1,6 @@
+# 2024
+1. Risnumawan, A., Anggraeni, M.E., Darmawan, A., Bilfagih, A.S., Sulistijono, I.A., & Purnomo, D.S. (2024). **Robot Mobile Pemindai Fotografi Tiga Dimensi Otomatis**. Paten No. IDS000009192 diberikan tanggal 29 November 2024. Kementerian Hukum dan Hak Asasi Manusia Republik Indonesia. <a href="https://drive.google.com/open?id=1baf6ea0eXuIw4918BC8zbUnRAPuCe18n" style="color:red;">[Paper]</a>
+
 # 2023
 1. Anggraeni, M.E., Risnumawan, A., Wirayudha, B., dan Apriliani, R.P. (2023). **Katalog Elektronik Tiga Dimensi Fotografi Nusantara**. Surabaya: Hak Cipta EC00202385356.
 1. Risnumawan, A., Anggraeni, M.E., dan Bilfagih, A.S. (2023). **Gambar Teknik Alat Perekam Otomatis Tiga Dimensi - Series Mobile Robot**. Surabaya: Hak Cipta EC00202385380.

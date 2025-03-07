@@ -4,8 +4,14 @@ import dayjs from 'dayjs';
 
 const FinalProjects = ({ datas }) => {
   const getImageUrl = (urlsOri) => {
-    const urls = urlsOri.split(',');
-    const url = urls[urls.length - 1];
+    const urls = urlsOri.split(',').map((url) => url.trim()).filter((url) => url !== '');
+    const url = urls.length > 0 ? urls[urls.length - 1] : '';
+    // Extract ID from Google Drive URL
+    const match = url.match(/[-\w]{25,}/);
+    if (match && match[0]) {
+      // Use the export=view format which works better for embedding
+      return `https://drive.google.com/thumbnail?id=${match[0]}&sz=w100-h100`;
+    }
     return url.replace('open?', 'uc?');
   };
 

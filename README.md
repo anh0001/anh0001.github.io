@@ -73,6 +73,20 @@ For a static export without deploying to GitHub Pages:
 
 This will generate a static version in `personal-site/build/` which you can host or deploy to a CDN.
 
+#### Troubleshooting Static Export
+
+If you encounter an error like `pageerror: SyntaxError: Unexpected token '.'` during the `npm run predeploy` command, this is likely due to modern JavaScript features (like optional chaining `?.` or nullish coalescing `??`) not being supported by react-snap.
+
+**Alternative Solution:**
+
+Skip react-snap and just build the project directly:
+
+```bash
+npm run build
+```
+
+This will create the `/build` folder with all static assets ready for deployment. The only difference is that you won't have pre-rendered HTML pages, but your React app will still function correctly when deployed.
+
 ## 🙌 Acknowledgements
 
 - Initial template from [Future Imperfect](https://html5up.net/future-imperfect) by [@ajlkn](https://github.com/ajlkn) for [HTML5 UP](html5up.net).

@@ -39,33 +39,13 @@ jobs:
           cache: "npm"
       - name: Install
         run: npm ci
-      - name: Build and Render
+      - name: Build (Skip react-snap)
         shell: bash
-        run: |
-          # NOTE: Rendering can be flaky and react-snap is no
-          # longer maintained, so retry until I convert to next.
-          function retry {
-            local n=1
-            local max=5
-            local delay=1
-            while true; do
-              "$@" && break || {
-                if [[ $n -lt $max ]]; then
-                  ((n++))
-                  echo "Command failed. Attempt $n/$max:"
-                  sleep $delay;
-                else
-                  echo "The command has failed after $n attempts."
-                  return 1
-                fi
-              }
-            done
-          }
-          retry npm run predeploy
+        run: npm run build
         env:
           NODE_ENV: production
           # Remove this line if you would like to skip using google analytics
-          REACT_APP_GA_TRACKING_ID: UA-68649021-1
+          # REACT_APP_GA_TRACKING_ID: UA-68649021-1
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact

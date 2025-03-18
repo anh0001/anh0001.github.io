@@ -59,30 +59,12 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y google-chrome-stable
       - run: npm ci
-      - name: Build and Statically Render
+      - name: Build
         shell: bash
         run: |
-          # Create react-snap config
-          echo 'module.exports = { puppeteerArgs: ["--no-sandbox", "--disable-setuid-sandbox"] };' > react-snap.config.js
-          
-          function retry {
-            local n=1
-            local max=5
-            local delay=1
-            while true; do
-              "$@" && break || {
-                if [[ $n -lt $max ]]; then
-                  ((n++))
-                  echo "Command failed. Attempt $n/$max:"
-                  sleep $delay;
-                else
-                  echo "The command has failed after $n attempts."
-                  return 1
-                fi
-              }
-            done
-          }
-          retry npm run predeploy
+          # Bypassing react-snap due to compatibility issues with modern JS syntax
+          # Original command was: npm run predeploy
+          npm run build
         env:
           NODE_ENV: development
       - name: Test

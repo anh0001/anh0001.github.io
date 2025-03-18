@@ -51,33 +51,14 @@ jobs:
         run: npm run build
         env:
           CI: false
-      - name: Build and Render
-        shell: bash
-        run: |
-          # NOTE: Rendering can be flaky and react-snap is no
-          # longer maintained, so retry until I convert to next.
-          function retry {
-            local n=1
-            local max=5
-            local delay=1
-            while true; do
-              "$@" && break || {
-                if [[ $n -lt $max ]]; then
-                  ((n++))
-                  echo "Command failed. Attempt $n/$max:"
-                  sleep $delay;
-                else
-                  echo "The command has failed after $n attempts."
-                  return 1
-                fi
-              }
-            done
-          }
-          retry npm run predeploy
-        env:
-          NODE_ENV: production
           # Remove this line if you would like to skip using google analytics
           REACT_APP_GA_TRACKING_ID: UA-68649021-1
+          NODE_ENV: production
+      # Removed the flaky react-snap rendering step that was causing JS syntax errors
+      # Original step was:
+      # - name: Build and Render
+      #   shell: bash
+      #   run: retry npm run predeploy
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact

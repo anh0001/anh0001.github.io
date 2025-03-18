@@ -1,11 +1,11 @@
 {
   "name": "personal-site",
   "version": "4.0.0",
-  "homepage": "https://anhar.lecturer.pens.ac.id/",
+  "homepage": "https://risnumawan-anhar.github.io",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/anh0001/personal-site.git"
+    "url": "https://github.com/anh0001/risnumawan-anhar.github.io.git"
   },
   "engines": {
     "node": ">=16.x"

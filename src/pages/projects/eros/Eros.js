@@ -7,12 +7,14 @@ import Main from '../../../layouts/Main';
 import Achievements from '../../../components/Projects/Eros/Achievements';
 import Members from '../../../components/Projects/Eros/Members';
 import FormerMembers from '../../../components/Projects/Eros/FormerMembers';
+import ProjectOverview from '../../../components/Projects/Eros/ProjectOverview';
 
 import teamMembers from '../../../data/projects/eros/teamMembers';
 import formerMembers from '../../../data/projects/eros/formerMembers';
 // import erosImages from '../../../data/projects/eros/erosImages';
 
 const sections = [
+  'Project Overview',
   'Achievements',
   'Team Members',
   'Former Members',
@@ -56,12 +58,13 @@ const Eros = () => {
 
         <div className="title" style={{ textAlign: 'center' }}>
           <h2>
-            <a href="https://erosrobotic.id/">
+            <a href="https://eepis-robotsoccer.github.io/index.html">
               Official Website of EROS Humanoid Soccer Robot
             </a>
           </h2>
         </div>
 
+        <ProjectOverview />
         <Achievements data={achievementsMarkdown} />
         <Members data={teamMembers} />
         <FormerMembers data={formerMembers} />

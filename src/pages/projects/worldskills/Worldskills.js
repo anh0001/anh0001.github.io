@@ -14,7 +14,7 @@ const Worldskills = () => {
           .then((r) => r.text())
           .then(setMarkdown);
       });
-  });
+  }, []); // Added empty dependency array to prevent infinite reloading
 
   const count = markdown.split(/\s+/)
     .map((s) => s.replace(/\W/g, ''))

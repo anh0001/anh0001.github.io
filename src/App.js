@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Main from './layouts/Main'; // fallback for lazy pages
 import './static/css/main.scss'; // All of our styles
 
@@ -22,7 +22,7 @@ const Stats = lazy(() => import('./pages/Stats'));
 const Patent = lazy(() => import('./pages/Patent'));
 
 const App = () => (
-  <BrowserRouter basename={PUBLIC_URL}>
+  <HashRouter basename={PUBLIC_URL}>
     <Suspense fallback={<Main />}>
       <Routes>
         <Route path="/" element={<Index />} />
@@ -39,7 +39,7 @@ const App = () => (
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>
-  </BrowserRouter>
+  </HashRouter>
 );
 
 export default App;

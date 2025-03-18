@@ -37,19 +37,51 @@ jobs:
         with:
           node-version-file: ".nvmrc"
           cache: "npm"
+      - name: Install Chrome
+        run: |
+          wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+          sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
       - name: Install
         run: npm ci
-      - name: Build (Skip react-snap)
-        shell: bash
+      - name: Install Dependencies
+        run: npm install
+      - name: Build
         run: npm run build
+        env:
+          CI: false
+      - name: Build and Render
+        shell: bash
+        run: |
+          # NOTE: Rendering can be flaky and react-snap is no
+          # longer maintained, so retry until I convert to next.
+          function retry {
+            local n=1
+            local max=5
+            local delay=1
+            while true; do
+              "$@" && break || {
+                if [[ $n -lt $max ]]; then
+                  ((n++))
+                  echo "Command failed. Attempt $n/$max:"
+                  sleep $delay;
+                else
+                  echo "The command has failed after $n attempts."
+                  return 1
+                fi
+              }
+            done
+          }
+          retry npm run predeploy
         env:
           NODE_ENV: production
           # Remove this line if you would like to skip using google analytics
-          # REACT_APP_GA_TRACKING_ID: UA-68649021-1
+          REACT_APP_GA_TRACKING_ID: UA-68649021-1
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
           path: "build"
       - name: Deploy to GitHub Pages

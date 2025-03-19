@@ -36,6 +36,16 @@ const data = [
       + 'no-till agricultural environments. This system integrates multiple sensor data types '
       + 'to enhance mobile robots\' capability to navigate uneven terrain and varying crop densities.',
   },
+  {
+    title: 'Multi-Modal Interactive Healthcare Robot System',
+    subtitle: 'Elderly care robotics',
+    link: '/projects/eldercare_robot_system_2024',
+    image: '/images/projects/eldercare_robot_system_2024/marunoichi_grup_foto.webp',
+    date: '2024-05-01',
+    desc: 'Three interconnected healthcare robotic systems targeting elderly care: "HootScape," '
+      + '"ESP32 Owl Companion," and "Magic Hand Assistive Gripper." These systems enhance '
+      + 'independence and cognitive function while providing essential monitoring capabilities.',
+  },
 ];
 
 export default data;

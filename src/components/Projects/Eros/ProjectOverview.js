@@ -1,32 +1,9 @@
 import React from 'react';
-import ImageGallery from 'react-image-gallery';
-import erosImages from '../../../data/projects/eros/erosImages';
 
 const ProjectOverview = () => (
   <div className="project-overview">
     <div className="link-to" id="project overview" />
     <h3>Project Overview</h3>
-    {/* Image Gallery with fixed configuration */}
-    <div className="eros-gallery-container">
-      <ImageGallery
-        items={erosImages}
-        showPlayButton
-        showFullscreenButton
-        slideInterval={5000}
-        autoPlay={false}
-        showThumbnails
-        slideDuration={450}
-        slideOnThumbnailOver={false}
-        useBrowserFullscreen
-        showNav
-        showBullets={false}
-        showIndex
-        thumbnailPosition="bottom"
-        disableThumbnailScroll={false}
-        disableKeyDown={false}
-        additionalClass="eros-gallery"
-      />
-    </div>
     <h4>Humanoid Soccer Robot Project - PENS (2016-2024)</h4>
     <p><strong>Source funding:</strong> Sponsors and Politeknik Elektronika Negeri Surabaya</p>
     <h5>Project Overview</h5>

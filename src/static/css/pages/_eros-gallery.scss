@@ -65,30 +65,46 @@
       flex-wrap: wrap;
       width: 100%;
       gap: 4px; /* Add consistent gap between thumbnails */
+      padding: 0; /* Remove any padding that might create space */
     }
   }
   
-  /* Style thumbnail items */
+  /* Style thumbnail items with proper vertical centering */
   .image-gallery-thumbnail {
     width: 80px;
     height: 60px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Vertical centering */
+    justify-content: center; /* Horizontal centering */
     border: 2px solid transparent;
     transition: border-color 0.3s ease;
     margin: 0; /* Remove default margins */
+    padding: 0; /* Remove padding that might offset centering */
+    overflow: hidden; /* Prevent content from spilling out */
     
     &.active {
       border: 2px solid #2e59ba;
     }
     
+    /* Fix for thumbnail image positioning */
+    .image-gallery-thumbnail-inner {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
     img {
+      position: relative;
+      top: 50%; /* Position at middle */
+      transform: translateY(-50%); /* Shift up by half its height */
       height: auto !important;
       width: auto !important;
       max-height: 50px !important;
       max-width: 70px !important;
       object-fit: contain;
+      margin: 0 auto; /* Center horizontally */
     }
   }
   
@@ -158,6 +174,29 @@
   &.image-gallery {
     display: flex;
     flex-direction: column;
+  }
+  
+  /* Completely remove the empty boxes in top left */
+  .image-gallery-left-nav:empty,
+  .image-gallery-right-nav:empty,
+  .image-gallery-play-button:empty,
+  .image-gallery-fullscreen-button:empty,
+  .image-gallery-icon:empty {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    pointer-events: none !important;
+  }
+
+  /* Remove any default navigation controls that might create empty space */
+  .image-gallery-slides:before,
+  .image-gallery-slides:after {
+    display: none !important;
+    content: none !important;
   }
 }
 

@@ -55,39 +55,24 @@ const Eros = () => {
         />
       </div>
     ),
-    // Add custom thumbnail renderer
+    // Enhanced thumbnail renderer for perfect centering
     renderThumbInner: (item) => (
       <div className="image-gallery-thumbnail-inner">
         <img
           src={item.thumbnail}
           alt={item.thumbnailAlt || 'EROS Robot Thumbnail'}
           className="image-gallery-thumbnail-image"
+          style={{
+            display: 'block',
+            position: 'relative',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            margin: '0 auto',
+          }}
         />
       </div>
     ),
-    // Add these custom UI components for navigation
-    renderLeftNav: (onClick, disabled) => (
-      <button
-        type="button"
-        className="image-gallery-left-nav"
-        disabled={disabled}
-        onClick={onClick}
-        aria-label="Previous Slide"
-      >
-        ❮
-      </button>
-    ),
-    renderRightNav: (onClick, disabled) => (
-      <button
-        type="button"
-        className="image-gallery-right-nav"
-        disabled={disabled}
-        onClick={onClick}
-        aria-label="Next Slide"
-      >
-        ❯
-      </button>
-    ),
+    // Removed custom navigation rendering to eliminate empty boxes
   };
 
   return (

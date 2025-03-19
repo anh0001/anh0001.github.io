@@ -45,6 +45,7 @@ const Eros = () => {
     showIndex: true,
     autoPlay: false,
     useBrowserFullscreen: true,
+    lazyLoad: true, // Enable lazy loading for better performance
     renderItem: (item) => (
       <div className="image-gallery-image">
         <img
@@ -53,6 +54,39 @@ const Eros = () => {
           style={{ maxHeight: '400px', width: 'auto', margin: '0 auto' }}
         />
       </div>
+    ),
+    // Add custom thumbnail renderer
+    renderThumbInner: (item) => (
+      <div className="image-gallery-thumbnail-inner">
+        <img
+          src={item.thumbnail}
+          alt={item.thumbnailAlt || 'EROS Robot Thumbnail'}
+          className="image-gallery-thumbnail-image"
+        />
+      </div>
+    ),
+    // Add these custom UI components for navigation
+    renderLeftNav: (onClick, disabled) => (
+      <button
+        type="button"
+        className="image-gallery-left-nav"
+        disabled={disabled}
+        onClick={onClick}
+        aria-label="Previous Slide"
+      >
+        ❮
+      </button>
+    ),
+    renderRightNav: (onClick, disabled) => (
+      <button
+        type="button"
+        className="image-gallery-right-nav"
+        disabled={disabled}
+        onClick={onClick}
+        aria-label="Next Slide"
+      >
+        ❯
+      </button>
     ),
   };
 

@@ -10,6 +10,7 @@
     margin-bottom: 5px !important;
     position: relative; /* For absolute positioning of slides */
     overflow: hidden; /* Hide overflow */
+    order: 1; /* Ensure proper display order */
   }
   
   /* Fix positioning of slides */
@@ -21,6 +22,9 @@
     bottom: 0;
     height: 400px !important; /* Fixed height */
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   /* Fix image dimensions and ensure proper scaling */
@@ -47,6 +51,7 @@
     margin-top: 0 !important; /* Remove the top margin */
     padding-top: 0;
     width: 100%; /* Ensure full width */
+    order: 2; /* Place thumbnails below the slider */
   }
   
   .image-gallery-thumbnails {
@@ -59,23 +64,31 @@
       justify-content: center; /* Center thumbnails container */
       flex-wrap: wrap;
       width: 100%;
+      gap: 4px; /* Add consistent gap between thumbnails */
     }
   }
   
   /* Style thumbnail items */
   .image-gallery-thumbnail {
     width: 80px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 2px solid transparent;
     transition: border-color 0.3s ease;
-    margin: 0 2px; /* Reduce margin between thumbnails */
+    margin: 0; /* Remove default margins */
     
     &.active {
       border: 2px solid #2e59ba;
     }
     
     img {
-      height: 50px !important;
-      object-fit: cover;
+      height: auto !important;
+      width: auto !important;
+      max-height: 50px !important;
+      max-width: 70px !important;
+      object-fit: contain;
     }
   }
   
@@ -130,11 +143,21 @@
   
   /* Fix positioning for index indicator */
   .image-gallery-index {
-    top: 0;
-    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border-radius: 3px;
     padding: 5px 10px;
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 0 0 0 5px;
+    font-size: 14px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 5;
+  }
+  
+  /* Fix the gallery container structure */
+  &.image-gallery {
+    display: flex;
+    flex-direction: column;
   }
 }
 

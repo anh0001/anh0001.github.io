@@ -72,7 +72,29 @@ const Eros = () => {
         />
       </div>
     ),
-    // Removed custom navigation rendering to eliminate empty boxes
+    // Add these custom UI components to remove empty elements
+    renderLeftNav: (onClick, disabled) => (
+      <button
+        type="button"
+        className="image-gallery-left-nav"
+        disabled={disabled}
+        onClick={onClick}
+        aria-label="Previous Slide"
+      >
+        ❮
+      </button>
+    ),
+    renderRightNav: (onClick, disabled) => (
+      <button
+        type="button"
+        className="image-gallery-right-nav"
+        disabled={disabled}
+        onClick={onClick}
+        aria-label="Next Slide"
+      >
+        ❯
+      </button>
+    ),
   };
 
   return (

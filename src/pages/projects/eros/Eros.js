@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'; // Make sure to import useState and useEffect
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ImageGallery from 'react-image-gallery';
 
@@ -30,7 +30,21 @@ const Eros = () => {
           .then((r) => r.text())
           .then(setAchievementsMarkdown);
       });
-  }, []); // Don't forget to add dependency array if needed
+  }, []);
+
+  // Image gallery settings to ensure proper display
+  const gallerySettings = {
+    showPlayButton: true,
+    showFullscreenButton: true,
+    slideInterval: 5000,
+    slideDuration: 450,
+    showThumbnails: true,
+    thumbnailPosition: 'bottom',
+    showNav: true,
+    showBullets: false,
+    showIndex: true,
+    autoPlay: false,
+  };
 
   return (
     <Main
@@ -47,16 +61,18 @@ const Eros = () => {
                   <a href={`#${sec.toLowerCase()}`}>{sec}</a>
                 </h4>))}
             </div>
-
           </div>
         </header>
 
-        <ImageGallery
-          items={erosImages}
-          additionalClass="eros-image-gallery"
-        />
+        <div className="gallery-container">
+          <ImageGallery
+            items={erosImages}
+            {...gallerySettings}
+            additionalClass="eros-image-gallery"
+          />
+        </div>
 
-        <div className="title" style={{ textAlign: 'center' }}>
+        <div className="title" style={{ textAlign: 'center', margin: '1em 0 2em 0' }}>
           <h2>
             <a href="https://eepis-robotsoccer.github.io/index.html">
               Official Website of EROS Humanoid Soccer Robot

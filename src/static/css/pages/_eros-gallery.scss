@@ -1,120 +1,110 @@
-/* EROS Image Gallery Styles - Fixed Version */
-.eros-gallery-container {
-  margin: 2em 0 3em 0;
+/* Enhanced EROS Image Gallery Styles */
+.eros-image-gallery {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 2em auto;
   
-  .image-gallery {
-    width: 100%;
-    max-width: 800px; /* Limit maximum width */
-    margin: 0 auto;
+  /* Fix the slide container */
+  .image-gallery-slide {
+    position: relative !important;
+    height: auto !important;
   }
   
-  /* Fix image sizing issues */
-  .image-gallery-slide {
-    position: relative;
-    height: auto !important;
+  /* Fix image dimensions and ensure proper scaling */
+  .image-gallery-image {
+    max-height: 450px;
     
     img {
-      position: relative !important;
-      width: 100% !important;
+      position: static !important;
+      max-height: 450px !important;
+      max-width: 100% !important;
+      width: auto !important;
       height: auto !important;
-      max-height: 400px !important; /* Reduced from 500px */
+      margin: 0 auto;
       object-fit: contain !important;
+      display: block;
     }
   }
   
-  /* Fix thumbnails */
+  /* Improve thumbnails display */
   .image-gallery-thumbnails-wrapper {
     margin-top: 10px;
   }
   
   .image-gallery-thumbnails {
-    overflow: hidden;
+    overflow: auto;
     
     .image-gallery-thumbnails-container {
       text-align: center;
-      white-space: nowrap;
     }
   }
   
+  /* Style thumbnail items */
   .image-gallery-thumbnail {
-    display: inline-block;
-    width: 80px; /* Smaller thumbnails */
-    margin-right: 5px;
+    width: 80px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    
+    &.active {
+      border: 2px solid #2e59ba;
+    }
     
     img {
-      height: 50px !important; /* Fixed height for thumbnails */
-      width: 100%;
+      height: 50px !important;
       object-fit: cover;
     }
   }
   
-  /* Add a subtle border and shadow */
-  .image-gallery-content {
-    border-radius: 4px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Fix positioning of fullscreen view */
-  .image-gallery-fullscreen-button {
-    z-index: 5;
-  }
-  
-  /* Fix play button positioning */
-  .image-gallery-play-button {
-    z-index: 5;
-  }
-  
-  /* Fix navigation arrows */
+  /* Enhance navigation buttons */
   .image-gallery-left-nav, 
   .image-gallery-right-nav {
-    z-index: 5;
-    padding: 0 10px;
-    font-size: 2em !important;
+    padding: 0 15px;
+    font-size: 2.5em;
     
     &:hover {
       color: #2e59ba;
     }
   }
   
-  /* Improve thumbnails appearance */
-  .image-gallery-thumbnail.active {
-    border: 3px solid #2e59ba;
+  /* Fix fullscreen button positioning */
+  .image-gallery-fullscreen-button {
+    bottom: 0;
+    z-index: 5;
+  }
+  
+  /* Add subtle enhancements */
+  .image-gallery-content {
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
 }
 
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
-  .eros-gallery-container {
-    .image-gallery-slide img {
-      max-height: 300px !important; /* Even smaller on tablets */
+  .eros-image-gallery {
+    .image-gallery-image img {
+      max-height: 350px !important;
     }
     
     .image-gallery-thumbnail {
-      width: 60px;
+      width: 70px;
     }
   }
 }
 
-/* Mobile adjustments */
 @media screen and (max-width: 480px) {
-  .eros-gallery-container {
-    .image-gallery-slide img {
-      max-height: 200px !important; /* Much smaller on phones */
+  .eros-image-gallery {
+    .image-gallery-image img {
+      max-height: 250px !important;
     }
     
     .image-gallery-thumbnail {
-      width: 50px;
+      width: 60px;
       
       img {
         height: 40px !important;
       }
-    }
-    
-    /* Improve mobile controls */
-    .image-gallery-left-nav, 
-    .image-gallery-right-nav {
-      padding: 0 5px;
     }
   }
 }

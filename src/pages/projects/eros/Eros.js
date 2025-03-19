@@ -44,6 +44,16 @@ const Eros = () => {
     showBullets: false,
     showIndex: true,
     autoPlay: false,
+    useBrowserFullscreen: true,
+    renderItem: (item) => (
+      <div className="image-gallery-image">
+        <img
+          src={item.original}
+          alt={item.originalAlt || 'EROS Robot'}
+          style={{ maxHeight: '400px', width: 'auto', margin: '0 auto' }}
+        />
+      </div>
+    ),
   };
 
   return (

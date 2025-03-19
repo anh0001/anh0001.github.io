@@ -103,7 +103,11 @@
     <style>
       /* Quick fix for overlapping images and size issues */
       .image-gallery-slide {
-        position: static !important;
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
       }
       
       .image-gallery-slide img {
@@ -121,6 +125,28 @@
       
       .image-gallery-thumbnails .image-gallery-thumbnails-container {
         text-align: center;
+      }
+      
+      /* Fixed height for slide container */
+      .image-gallery-slide-wrapper {
+        height: 400px !important;
+        position: relative;
+        overflow: hidden;
+        order: 1;
+        margin-bottom: 5px !important;
+      }
+      
+      .image-gallery-thumbnails-wrapper {
+        order: 2;
+        margin-top: 0 !important;
+      }
+      
+      /* Fix for image dimensions within slides */
+      .image-gallery-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
       }
     </style>
   </head>

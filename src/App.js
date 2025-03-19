@@ -17,6 +17,7 @@ const Projects = lazy(() => import('./pages/projects/Projects'));
 const Eros = lazy(() => import('./pages/projects/eros/Eros'));
 const FinalProjects = lazy(() => import('./pages/projects/finalProjects/FinalProjects'));
 const Worldskills = lazy(() => import('./pages/projects/worldskills/Worldskills'));
+const NoTillNavigation = lazy(() => import('./pages/projects/no_till_navigation/NoTillNavigation'));
 const Resume = lazy(() => import('./pages/Resume'));
 const Stats = lazy(() => import('./pages/Stats'));
 const Patent = lazy(() => import('./pages/Patent'));
@@ -33,6 +34,7 @@ const App = () => (
         <Route path="/projects/eros" element={<Eros />} />
         <Route path="/projects/finalprojects" element={<FinalProjects />} />
         <Route path="/projects/worldskills" element={<Worldskills />} />
+        <Route path="/projects/no_till_navigation" element={<NoTillNavigation />} />
         <Route path="/stats" element={<Stats />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/resume" element={<Resume />} />

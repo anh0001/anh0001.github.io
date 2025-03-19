@@ -26,6 +26,16 @@ const data = [
       + 'The robot must run in real-time autonomously to complete the given tasks '
       + 'in the World Skills competition. ',
   },
+  {
+    title: 'Deep Learning for No-Till Agriculture Navigation',
+    subtitle: 'Neurocognitive-inspired navigation',
+    link: '/projects/no_till_navigation',
+    image: '/images/projects/no_till_navigation/notill_action.webp',
+    date: '2024-04-01',
+    desc: 'A neurocognitive-inspired deep learning approach for autonomous navigation in challenging '
+      + 'no-till agricultural environments. This system integrates multiple sensor data types '
+      + 'to enhance mobile robots\' capability to navigate uneven terrain and varying crop densities.',
+  },
 ];
 
 export default data;

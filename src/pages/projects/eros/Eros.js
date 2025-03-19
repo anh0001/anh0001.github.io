@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'; // Make sure to import useState and useEffect
 import { Link } from 'react-router-dom';
-// import ImageGallery from 'react-image-gallery';
+import ImageGallery from 'react-image-gallery';
 
 import Main from '../../../layouts/Main';
 
@@ -11,7 +11,7 @@ import ProjectOverview from '../../../components/Projects/Eros/ProjectOverview';
 
 import teamMembers from '../../../data/projects/eros/teamMembers';
 import formerMembers from '../../../data/projects/eros/formerMembers';
-// import erosImages from '../../../data/projects/eros/erosImages';
+import erosImages from '../../../data/projects/eros/erosImages';
 
 const sections = [
   'Project Overview',
@@ -51,10 +51,10 @@ const Eros = () => {
           </div>
         </header>
 
-        {/* <ImageGallery
+        <ImageGallery
           items={erosImages}
           additionalClass="eros-image-gallery"
-        /> */}
+        />
 
         <div className="title" style={{ textAlign: 'center' }}>
           <h2>

@@ -1,9 +1,22 @@
 import React from 'react';
+import ImageGallery from 'react-image-gallery';
+import erosImages from '../../../data/projects/eros/erosImages';
 
 const ProjectOverview = () => (
   <div className="project-overview">
     <div className="link-to" id="project overview" />
     <h3>Project Overview</h3>
+    {/* Image Gallery Added Here */}
+    <div className="eros-gallery-container">
+      <ImageGallery
+        items={erosImages}
+        showPlayButton
+        showFullscreenButton
+        slideInterval={5000}
+        autoPlay
+        showThumbnails
+      />
+    </div>
     <h4>Humanoid Soccer Robot Project - PENS (2016-2024)</h4>
     <p><strong>Source funding:</strong> Sponsors and Politeknik Elektronika Negeri Surabaya</p>
     <h5>Project Overview</h5>
@@ -50,8 +63,7 @@ const ProjectOverview = () => (
       </li>
       <li>Machine learning implementation for real-time field and ball detection</li>
       <li>
-        Robotics control systems including PID controllers, IMU integration,
-        and balance optimization
+        Robotics control systems including PID controllers, IMU integration,and balance optimization
       </li>
       <li>Real-time sensor fusion for improved environmental awareness</li>
       <li>Robot Operating System (ROS) implementation for distributed robot control</li>

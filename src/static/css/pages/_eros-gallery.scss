@@ -1,0 +1,62 @@
+/* EROS Image Gallery Styles */
+.eros-gallery-container {
+    margin: 2em 0 3em 0;
+    
+    .image-gallery {
+      width: 100%;
+      margin: 0 auto;
+    }
+    
+    .image-gallery-slide img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      max-height: 500px;
+    }
+    
+    .image-gallery-thumbnail {
+      width: 100px;
+      
+      img {
+        height: 60px;
+        object-fit: cover;
+      }
+    }
+    
+    /* Add a subtle border and shadow */
+    .image-gallery-content {
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+    
+    /* Improve navigation buttons */
+    .image-gallery-left-nav, .image-gallery-right-nav {
+      &:hover {
+        color: #2e59ba;
+      }
+    }
+    
+    /* Improve thumbnails appearance */
+    .image-gallery-thumbnail.active {
+      border: 3px solid #2e59ba;
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 768px) {
+    .eros-gallery-container {
+      .image-gallery-slide img {
+        max-height: 350px;
+      }
+    }
+  }
+  
+  /* Mobile adjustments */
+  @media screen and (max-width: 480px) {
+    .eros-gallery-container {
+      .image-gallery-slide img {
+        max-height: 250px;
+      }
+    }
+  }

@@ -6,15 +6,25 @@ const ProjectOverview = () => (
   <div className="project-overview">
     <div className="link-to" id="project overview" />
     <h3>Project Overview</h3>
-    {/* Image Gallery Added Here */}
+    {/* Image Gallery with fixed configuration */}
     <div className="eros-gallery-container">
       <ImageGallery
         items={erosImages}
         showPlayButton
         showFullscreenButton
         slideInterval={5000}
-        autoPlay
+        autoPlay={false}
         showThumbnails
+        slideDuration={450}
+        slideOnThumbnailOver={false}
+        useBrowserFullscreen
+        showNav
+        showBullets={false}
+        showIndex
+        thumbnailPosition="bottom"
+        disableThumbnailScroll={false}
+        disableKeyDown={false}
+        additionalClass="eros-gallery"
       />
     </div>
     <h4>Humanoid Soccer Robot Project - PENS (2016-2024)</h4>
@@ -63,7 +73,8 @@ const ProjectOverview = () => (
       </li>
       <li>Machine learning implementation for real-time field and ball detection</li>
       <li>
-        Robotics control systems including PID controllers, IMU integration,and balance optimization
+        Robotics control systems including PID controllers, IMU integration,
+        and balance optimization
       </li>
       <li>Real-time sensor fusion for improved environmental awareness</li>
       <li>Robot Operating System (ROS) implementation for distributed robot control</li>

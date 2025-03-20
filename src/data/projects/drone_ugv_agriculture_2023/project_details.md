@@ -6,7 +6,7 @@ Led the development of an integrated drone-UGV (Unmanned Ground Vehicle) system 
 
 <p align="center"><img src="/images/projects/drone_ugv_agriculture_2023/vari_analysis.webp" alt="VARI Analysis and PSO Optimization" width="80%"></p>
 
-<p align="center"><img src="/images/projects/drone_ugv_agriculture_2023/drone_crop_scanning.webp" alt="Drone Scanning Crops and Field Visualization" width="30%"></p>
+<p align="center"><img src="/images/projects/drone_ugv_agriculture_2023/drone_crop_scanning.webp" alt="Drone Scanning Crops and Field Visualization" width="40%"></p>
 
 ## Key Contributions
 
@@ -57,7 +57,7 @@ The complete architecture includes:
 ## Project Demo Video
 
 <div align="center">
-  <iframe width="95%" height="480" src="https://www.youtube.com/embed/15jx0mif99M?start=0" title="Drone-UGV Agricultural Revolution Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="80%" height="400" src="https://www.youtube.com/embed/15jx0mif99M?start=0" title="Drone-UGV Agricultural Revolution Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   <p><em>Demo video showcasing the Drone-UGV system for precision agriculture</em></p>
 </div>
 

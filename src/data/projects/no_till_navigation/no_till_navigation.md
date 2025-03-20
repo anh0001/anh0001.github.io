@@ -4,7 +4,7 @@
 
 Developed a neurocognitive-inspired deep learning approach for autonomous navigation in challenging no-till agricultural environments. This system integrated multiple sensor data types to enhance mobile robots' capability to navigate uneven terrain and varying crop densities, directly addressing agricultural challenges posed by climate change.
 
-<p align="center"><img src="/images/projects/no_till_navigation/notill_action.webp" alt="Crawl Robot in No-Till Agriculture"></p>
+<p align="center"><img src="/images/projects/no_till_navigation/notill_action.webp" alt="Crawl Robot in No-Till Agriculture" width="50%"></p>
 
 ## Key Contributions
 
@@ -15,7 +15,7 @@ Developed a neurocognitive-inspired deep learning approach for autonomous naviga
 
 ## Technical Architecture
 
-<p align="center"><img src="/images/projects/no_till_navigation/block_diagram.webp" alt="Neural Network Architecture"></p>
+<p align="center"><img src="/images/projects/no_till_navigation/block_diagram.webp" alt="Neural Network Architecture" width="80%"></p>
 
 *Figure: The neural network architecture incorporating multiple sensory inputs with fusion mechanisms*
 

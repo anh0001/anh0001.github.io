@@ -19,6 +19,7 @@ const FinalProjects = lazy(() => import('./pages/projects/finalProjects/FinalPro
 const Worldskills = lazy(() => import('./pages/projects/worldskills/Worldskills'));
 const NoTillNavigation = lazy(() => import('./pages/projects/no_till_navigation/NoTillNavigation'));
 const EldercareRobotSystem = lazy(() => import('./pages/projects/eldercare_robot_system_2024/EldercareRobotSystem'));
+const Mobile3DPhotoRobot2023 = lazy(() => import('./pages/projects/mobile_3d_photo_robot_2023/Mobile3DPhotoRobot2023'));
 const Resume = lazy(() => import('./pages/Resume'));
 const Stats = lazy(() => import('./pages/Stats'));
 const Patent = lazy(() => import('./pages/Patent'));
@@ -37,6 +38,7 @@ const App = () => (
         <Route path="/projects/worldskills" element={<Worldskills />} />
         <Route path="/projects/no_till_navigation" element={<NoTillNavigation />} />
         <Route path="/projects/eldercare_robot_system_2024" element={<EldercareRobotSystem />} />
+        <Route path="/projects/mobile_3d_photo_robot_2023" element={<Mobile3DPhotoRobot2023 />} />
         <Route path="/stats" element={<Stats />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/resume" element={<Resume />} />

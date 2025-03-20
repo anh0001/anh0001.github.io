@@ -37,6 +37,16 @@ const data = [
       + 'to enhance mobile robots\' capability to navigate uneven terrain and varying crop densities.',
   },
   {
+    title: 'Metaverse-Ready 3D Photography Robot',
+    subtitle: 'Mobile Robot for 3D Object Reconstruction (2023)',
+    link: '/projects/mobile_3d_photo_robot_2023',
+    image: '/images/projects/mobile_3d_photo_robot_2023/robot_main.webp',
+    date: '2023-01-01',
+    desc: 'A mobile robot system for automated 3D photography and object reconstruction. '
+      + 'The robot autonomously navigates around objects while capturing high-resolution images '
+      + 'from multiple angles for 3D reconstruction in metaverse and e-commerce applications.',
+  },
+  {
     title: 'Multi-Modal Interactive Healthcare Robot System',
     subtitle: 'Elderly care robotics',
     link: '/projects/eldercare_robot_system_2024',

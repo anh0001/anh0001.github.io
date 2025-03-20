@@ -17,7 +17,7 @@ Developed a mobile robot system for automated 3D photography and object reconstr
 ## Project Demo Video
 
 <div align="center">
-  <iframe width="80%" height="400" src="https://www.youtube.com/embed/ExsCNhGe_TQ?start=85" title="Mobile 3D Photography Robot Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="80%" height="480" src="https://www.youtube.com/embed/ExsCNhGe_TQ?start=85" title="Mobile 3D Photography Robot Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   <p><em>Mobile 3D Photography Robot demonstration video</em></p>
 </div>
 

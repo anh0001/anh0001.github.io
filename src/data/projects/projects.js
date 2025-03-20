@@ -47,6 +47,16 @@ const data = [
       + 'from multiple angles for 3D reconstruction in metaverse and e-commerce applications.',
   },
   {
+    title: 'Drone-UGV Agriculture Revolution',
+    subtitle: 'Integrated aerial and ground system',
+    link: '/projects/drone_ugv_agriculture_2023',
+    image: '/images/projects/drone_ugv_agriculture_2023/drone_ugv_main.webp',
+    date: '2023-06-01',
+    desc: 'An integrated drone-UGV system for precision agriculture, combining aerial surveillance '
+      + 'with ground operations to optimize pest control, crop monitoring, and resource management. '
+      + 'The system leverages PSO algorithms and computer vision to enhance agricultural efficiency.',
+  },
+  {
     title: 'Multi-Modal Interactive Healthcare Robot System',
     subtitle: 'Elderly care robotics',
     link: '/projects/eldercare_robot_system_2024',

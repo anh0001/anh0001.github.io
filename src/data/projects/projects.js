@@ -57,6 +57,16 @@ const data = [
       + 'The system leverages PSO algorithms and computer vision to enhance agricultural efficiency.',
   },
   {
+    title: 'Empowering Elders: HSR Robot Eldercare',
+    subtitle: 'Autonomous Object Handling with HSR',
+    link: '/projects/hsr_eldercare_2024',
+    image: '/images/projects/hsr_eldercare_2024/hsr_robot_main.webp',
+    date: '2024-11-23',
+    desc: 'Development of a comprehensive eldercare system utilizing Toyota\'s Human Support Robot (HSR) '
+      + 'for assisted living environments. The project includes specialized navigation routines, '
+      + 'object detection algorithms, and sequence-of-activities monitoring for elderly care.',
+  },
+  {
     title: 'Multi-Modal Interactive Healthcare Robot System',
     subtitle: 'Elderly care robotics',
     link: '/projects/eldercare_robot_system_2024',

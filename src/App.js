@@ -18,6 +18,7 @@ const Eros = lazy(() => import('./pages/projects/eros/Eros'));
 const FinalProjects = lazy(() => import('./pages/projects/finalProjects/FinalProjects'));
 const Worldskills = lazy(() => import('./pages/projects/worldskills/Worldskills'));
 const NoTillNavigation = lazy(() => import('./pages/projects/no_till_navigation/NoTillNavigation'));
+const HSREldercare = lazy(() => import('./pages/projects/hsr_eldercare_2024/HSREldercare'));
 const EldercareRobotSystem = lazy(() => import('./pages/projects/eldercare_robot_system_2024/EldercareRobotSystem'));
 const Mobile3DPhotoRobot2023 = lazy(() => import('./pages/projects/mobile_3d_photo_robot_2023/Mobile3DPhotoRobot2023'));
 const DroneUGVAgriculture = lazy(() => import('./pages/projects/drone_ugv_agriculture_2023/DroneUGVAgriculture'));
@@ -38,6 +39,7 @@ const App = () => (
         <Route path="/projects/finalprojects" element={<FinalProjects />} />
         <Route path="/projects/worldskills" element={<Worldskills />} />
         <Route path="/projects/no_till_navigation" element={<NoTillNavigation />} />
+        <Route path="/projects/hsr_eldercare_2024" element={<HSREldercare />} />
         <Route path="/projects/eldercare_robot_system_2024" element={<EldercareRobotSystem />} />
         <Route path="/projects/mobile_3d_photo_robot_2023" element={<Mobile3DPhotoRobot2023 />} />
         <Route path="/projects/drone_ugv_agriculture_2023" element={<DroneUGVAgriculture />} />

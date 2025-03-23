@@ -1,6 +1,15 @@
 // TODO Add a couple lines about each project
 const data = [
   {
+    title: 'Intelligent Mobile Manipulator for Home Gardening',
+    subtitle: 'Robotic automation for indoor plants',
+    link: '/projects/home_gardening_robot_2025',
+    image: '/images/projects/home_gardening_robot_2025/home_gardening_main.webp',
+    date: '2025-01-01',
+    desc: 'An advanced ceiling-mounted and mobile robot system for home gardening that utilizes '
+      + 'computer vision and affordance segmentation to identify plants and tools. The system enables '
+      + 'precise watering, maintenance, and interaction with plants in indoor environments.',
+  }, {
     title: 'Final Projects',
     subtitle: 'Final Projects',
     link: '/projects/finalprojects',

@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-Led the development of an integrated healthcare robotics system utilizing the Human Support Robot (HSR) for elderly care environments. The project focused on implementing autonomous object handling capabilities within assisted living settings to enhance elder independence and quality of life. Key focus areas included developing navigation algorithms specifically tailored for indoor assisted living environments, creating an intuitive user interface for robot control, and establishing effective human-robot interaction paradigms suitable for elderly users.
+Led the development of an integrated healthcare robotics system utilizing the Human Support Robot (HSR) for elderly care environments under the supervision of Professor Naoyuki Kubota at Tokyo Metropolitan University. The project focused on implementing autonomous object handling capabilities within assisted living settings to enhance elder independence and quality of life. Key focus areas included developing navigation algorithms specifically tailored for indoor assisted living environments, creating an intuitive user interface for robot control, and establishing effective human-robot interaction paradigms suitable for elderly users.
 
 <p align="center">
   <video controls width="80%" style="max-width: 200px;">
@@ -22,9 +22,14 @@ Led the development of an integrated healthcare robotics system utilizing the Hu
 
 ## Technical Architecture
 
-<p align="center"><img src="/images/projects/hsr_eldercare_2024/navigation_system.webp" alt="HSR Navigation System Architecture" width="80%"></p>
+<p align="center">
+  <video controls width="80%">
+    <source src="/videos/projects/hsr_eldercare_2024/ode_hsr_sim.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</p>
 
-*Figure: HSR navigation system for assisted living environments*
+*Figure: HSR simulation in ODE showing trajectory planning using topological mapping*
 
 The system architecture is comprised of several integrated components:
 
@@ -96,13 +101,22 @@ The HSR robot provides customized support across key activities:
 - Personal hygiene support
 - Toilet use assistance
 
+<p align="center">
+  <video controls width="80%">
+    <source src="/videos/projects/hsr_eldercare_2024/wakeup_hsr.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</p>
+
+*Figure: "Wake Up" scenario with the HSR robot next to the bed. It shows the robot in a realistic eldercare environment.*
+
 ## Technologies Used
 
 - **Programming**: Python, C++, Jupyter Notebooks
 - **Frameworks**: ROS Noetic, Docker
 - **Computer Vision**: OpenCV, PyTorch
 - **Healthcare Data**: ROS2Healthcare
-- **Simulation**: Gazebo
+- **Simulation**: Gazebo, ODE
 - **Hardware**: Toyota HSR Robot
 - **Version Control**: Git, GitHub
 - **Development Tools**: VSCode, Jupyter

@@ -24,7 +24,7 @@ Led the development of an integrated healthcare robotics system utilizing the Hu
 
 <p align="center">
   <video controls width="80%">
-    <source src="/videos/projects/hsr_eldercare_2024/ode_hsr_sim.mp4" type="video/mp4">
+    <source src="/videos/projects/hsr_eldercare_2024/ode_sim_hsr.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </p>

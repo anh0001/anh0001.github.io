@@ -28,7 +28,7 @@ const HSREldercare = () => {
       <article className="post markdown" id="hsr-eldercare">
         <header>
           <div className="title">
-            <h2><Link to="/projects/hsr_eldercare_2024">Empowering Elders: Autonomous Object Handling with HSR Robot</Link></h2>
+            <h2><Link to="/projects/hsr_eldercare_2024">Empowering Elders: HSR Robot in Assisted Living Environments</Link></h2>
             <p>(in about {count} words)</p>
           </div>
         </header>

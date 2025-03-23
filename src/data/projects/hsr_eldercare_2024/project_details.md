@@ -1,4 +1,4 @@
-# Empowering Elders: Autonomous Object Handling with HSR Robot (2024)
+# Empowering Elders: HSR Robot in Assisted Living Environments (2024)
 
 ## Project Overview
 
